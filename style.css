@@ -1,0 +1,82 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body{
+    font-family: 'Roboto', sans-serif;
+}
+.slider-container{
+    margin: 10px auto;
+    width: 800px;
+    height: 350px;
+    position: relative;
+}
+.slider-container img{
+    position: absolute;
+    opacity: 0;
+    width: 100%;
+    max-height: 350px;
+    z-index: 1;
+}
+.slider-container img.active{
+    opacity: 1;
+}
+.slider-container .slider-number{
+    position: absolute;
+    z-index: 2;
+    top: 10px;
+    left: 10px;
+    color: #fff;
+    background-color: gray;
+    padding: 5px 10px;
+    border-radius: 5px;
+}
+.slider-control{
+    width: 800px;
+    margin: auto;
+    overflow: hidden;
+}
+.slider-control .previous, .slider-control .next{
+    color: #fff;
+    background-color: rgb(36, 199, 199);
+    padding: 5px;
+    border-radius: 5px;
+    width: 20%;
+    cursor: pointer;
+    text-align: center;
+}
+.slider-control .next{
+    float: right;
+}
+.slider-control .previous{
+    float: left;
+}
+.slider-control .next.disabled, .slider-control .previous.disabled{
+    cursor: no-drop;
+    background-color: rgb(169, 230, 230);
+}
+.slider-control .indicators{
+    width: 60%;
+    float: left;
+}
+.indicators ul{
+    list-style: none;
+    text-align: center;
+    margin: 0;
+}
+.indicators ul li{
+    display: inline-block;
+    background-color: #eeeeee;
+    font-weight: bold;
+    width: 28px;
+    height: 28px;
+    border-radius: 5px;
+    line-height: 28px;
+    cursor: pointer;
+    margin: 0 2px;
+}
+.indicators ul li.active{
+    background-color: rgb(36, 199, 199);
+    color: #fff;
+}
